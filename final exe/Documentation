@@ -1,0 +1,15 @@
+Documentation of Exercise1:
+
+Approach:
+
+The Python script reads the input CSV file containing employee data using the pandas library.
+It then derives the 'Effective Date' and 'End Date' for each historical record, ensuring there's no overlap by setting the end date one day before the next effective date.
+Missing data is handled by forward filling values from the most recent past record for the same employee.
+Columnar data is transformed into a row-based format where each row represents a specific period with consistent data.
+Finally, the transformed data is written into a new CSV file formatted for historical data analysis.
+
+Assumptions:
+
+The script assumes a one-year period for each historical record.
+Missing data is assumed to be forward filled from the most recent past record for the same employee.
+The 'End Date' for the latest record of an employee is assigned a far-future date (e.g., 2100-01-01).
